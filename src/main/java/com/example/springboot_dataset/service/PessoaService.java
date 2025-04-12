@@ -26,7 +26,7 @@ public class PessoaService {
                 .orElse(ResponseEntity.notFound().build());
     }
 
-    public ResponseEntity<List<Pessoa>> getPessoaByName(String name) {
+    public ResponseEntity<List<Pessoa>> getPessoaByNome(String name) {
         List<Pessoa> pessoas = pessoaRepository.findByNomeContainingIgnoreCase(name);
         return ResponseEntity.ok(pessoas);
     }

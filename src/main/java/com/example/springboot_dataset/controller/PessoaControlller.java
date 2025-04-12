@@ -41,7 +41,7 @@ public class PessoaControlller {
 
     @GetMapping("/by-nome")
     public ResponseEntity<List<Pessoa>> getPessoaByNome(@RequestParam String nome) {
-        return pessoaService.getPessoaByName(nome);
+        return pessoaService.getPessoaByNome(nome);
     }
 
     @GetMapping("/by-cidade")
